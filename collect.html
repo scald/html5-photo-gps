@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+    <title>LiftAlert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <link rel="apple-touch-icon" type="image/png" href="img/icons/icon.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="img/icons/icon-72.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="img/icons/icon-72@2.png">
+    <link rel="icon" type="image/png" href="img/icons/icon-72@2.png">
+     -->
+     <link href="css/styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="mobile-title">Collect</div>
+    <div class="content_top loading" id="location-loading">
+        <p class="text-center">
+            <img class="icon-md" src="img/load2.gif" />
+            <br/>Getting your location...</div>
+    <div class="container full left" id="survey-body">
+        <form enctype="multitype/form-data">
+            <div class="content_top input-group">
+                <span class="input-group-addon no-pad">
+                    <a id="refreshLoc" class="btn btn-default"><i class="glyphicon glyphicon-refresh"></i></a>
+                </span>
+                <p class="form-control" id="gAddress" disabled></p>
+
+            </div>
+            <p class="hide alert alert-danger" id="accuracyWarn"><i class="glyphicon glyphicon-warning-sign"></i> Warning! Accuracy is
+                <strong>
+                    <span id="accuracy"></span>meters.</strong>Try refresh button and wait until device can get a better fix.</p>
+            <div class="form-group">
+                <br/>
+                <span class="btn btn-default btn-file col-xs-12">
+                    <h3><i class='glyphicon glyphicon-camera'></i> Take Photo</h3>
+                    <input name="picture" type="file" capture="camera" accept="image/*" id="takePictureField" />
+                </span>
+                <img class="form-control" id="thepic" />
+            </div>
+            <div class="form-group">
+                <textarea rows="7" name="notes" id="notes" placeholder="Add Some Notes" class="form-control notes"></textarea>
+            </div>
+            <input type="hidden" id="latitude" name="latitude" />
+            <input type="hidden" id="longitude" name="longitude" />
+            <div class="form-group">
+                <a id="saveSurveyBtn" class="btn btn-success form-control" href="javascript:void(0)"><i class="glyphicon glyphicon-floppy-saved"></i>Save</a>
+            </div>
+        </form>
+    </div>
+<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="lib/fastclick.js"></script>
+<script type="text/javascript" src="lib/geolocation.js"></script>
+<script type="text/javascript" src="js/collect.js"></script>
+</body>
+
+</html>
